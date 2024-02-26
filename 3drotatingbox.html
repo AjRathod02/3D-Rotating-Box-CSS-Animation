@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>3D rotating box</title>
+    <style>
+        body , html{
+            height: 100%;
+            margin: 0;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+
+        .container{
+            perspective: 1000px;
+        }
+
+        .box{
+            width: 100px;
+            height: 100px;
+            border: 2px solid black;
+            border-radius: 10px;
+            background-color: orangered;
+            animation: rotate 1s linear infinite ;
+            transform-style: preserve-3d;
+        }
+
+        @keyframes rotate{
+            from{
+                transform: rotateX(0deg) rotateY(0deg) rotate(0deg);
+            }
+            to{
+                transform: rotateX(360deg) rotateY(360deg) rotateZ(360deg);
+            }
+        }
+    </style>
+</head>
+<body>
+    <dvi class="container">
+        <div class="box"></div>
+    </dvi>
+</body>
+</html>
